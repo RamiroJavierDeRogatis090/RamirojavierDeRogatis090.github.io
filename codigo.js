@@ -27,7 +27,6 @@ function setProgress(p) {
   progress.style.height = p + '%';
   if (scrollHint) {
     scrollHint.style.setProperty('--sp', (p / 100).toFixed(3));
-    scrollHint.classList.toggle('is-end', p >= 99);
   }
 }
 
@@ -99,7 +98,7 @@ window.addEventListener('scroll', () => {
 
 /* ===== Modo fullpage (una pantalla por sección, vuelo alternado) ===== */
 const FP_ANIM_MS = 680;
-const fpMQ = window.matchMedia('(min-width: 1000px) and (min-height: 700px) and (hover: hover) and (pointer: fine)');
+const fpMQ = window.matchMedia('(min-width: 900px) and (min-height: 560px) and (hover: hover) and (pointer: fine)');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
 let fpActive = false;
