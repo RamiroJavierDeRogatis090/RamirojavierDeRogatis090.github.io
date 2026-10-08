@@ -5,163 +5,291 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portafolio de Ramiro Javier De Rogatis, desarrollador web e ingeniero informático.">
-  <title>Portafolio de Ramiro Javier De Rogatis - RamaCoder00</title>
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="style.css">
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <!-- Favicon clásico -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta name="author" content="Ramiro Javier De Rogatis">
 
-  <!-- PNG estándar -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portafolio de Ramiro Javier De Rogatis - RamaCoder00">
+  <meta property="og:description" content="Desarrollador web e ingeniero informático. Conocé mis proyectos y habilidades.">
+  <meta property="og:url" content="https://ramiroderogatis.com/">
+  <meta property="og:image" content="https://ramiroderogatis.com/images/man1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0e1217">
+
+  <title>Portafolio de Ramiro Javier De Rogatis - RamaCoder00</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-
-  <!-- Apple Touch Icon -->
   <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-  <!-- Android/Chrome -->
   <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
-
-
+  <script>document.documentElement.classList.add('js-reveal');</script>
 </head>
 
 <body>
 
-  <div id="progress"></div>
+  <div id="progress" aria-hidden="true"></div>
 
-  <video autoplay loop muted plays-inline class="back-vid">
+  <div class="scroll-hint" aria-hidden="true">
+    <div class="scroll-hint__mouse">
+      <div class="scroll-hint__fill">
+        <div class="scroll-hint__wheel"></div>
+      </div>
+    </div>
+    <span class="scroll-hint__text" data-i18n="scroll.hint">Deslizá para explorar</span>
+  </div>
+
+  <video autoplay loop muted playsinline class="back-vid" aria-hidden="true">
     <source src="images/galaxy.mp4" type="video/mp4">
   </video>
-  <section class="main-section" id="sobreMI">
-    <nav>
-      <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">Rama</span>Coder00</h1>
-      <ul>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a class="active" href="#sobreMI">Sobre
-            mi</a>
-        </li>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#habilidades">Habilidades</a></li>
-        <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#form">Contacto</a></li>
-      </ul>
-    </nav>
 
+  <nav>
+    <a class="logo" href="#sobreMI" data-aos="zoom-in" data-aos-duration="1000">Rama<span>Coder00</span></a>
+
+    <div class="nav-actions">
+      <button class="lang-toggle" id="lang-toggle" aria-label="Cambiar idioma / Switch language">
+        <i class="bx bx-globe"></i> <span id="lang-label">EN</span>
+      </button>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+        <i class="bx bx-menu"></i>
+      </button>
+    </div>
+
+    <ul id="nav-menu">
+      <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a class="active" href="#sobreMI"
+          data-i18n="nav.about">Sobre mi</a></li>
+      <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="#habilidades"
+          data-i18n="nav.skills">Habilidades</a></li>
+      <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a href="#proyectos"
+          data-i18n="nav.projects">Proyectos</a></li>
+      <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"><a href="#form"
+          data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section class="main-section snap-screen" id="sobreMI">
     <div class="hero">
       <div class="hero-info">
-        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hola, soy De Rogatis Ramiro
+        <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700" data-i18n="hero.greeting">Hola, soy
+          De Rogatis Ramiro</h1>
+        <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900" data-i18n="hero.role">Desarrollador</h2>
+        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000" data-i18n="hero.bio">Soy estudiante de
+          Ingeniería Informática con orientación a la programación y experiencia en soporte técnico. Me apasiona el
+          desarrollo web y la resolución de problemas tecnológicos, combinando conocimientos académicos con práctica
+          profesional.</p>
 
-        </h1>
-        <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">Desarrolador</h2>
-        <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">Soy estudiante de Ingeniería Informática
-          con orientación a la programación y experiencia en soporte técnico. Me apasiona el desarrollo web y la
-          resolución de problemas tecnológicos, combinando conocimientos académicos con práctica profesional.</p>
-        <div class="Buttons">
-          <a class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100"
-            href="#form">Contrátame</a>
-          <a class="btn" href="CV_Ramiro_De_Rogatis.pdf" download>Descargar CV</a>
-
-          <ul class="ul-icons">
-            <li><a href="https://github.com/RamiroJavierDeRogatis090" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="1200"><i class='bx bxl-github'></i></a></li>
-            <li><a href="https://www.instagram.com/rami_derro31/" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="1300"><i class='bx bxl-instagram'></i></a></li>
-            <li><a href="https://walink.co/9wcy4d" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400"><i
-                  class='bx bxl-whatsapp'></i></a></li>
-
-
-            <li><a href="https://www.linkedin.com/in/ramiro-javier-de-rogatis-09b119342/" data-aos="fade-up"
-                data-aos-duration="1000" data-aos-delay="1400"><i class='bx bxl-linkedin'></i></a></li>
-
-
-
-          </ul>
+        <div class="hero-actions">
+          <a class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100" href="#form"
+            data-i18n="hero.hire">Contrátame</a>
+          <a class="btn btn--ghost" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1200"
+            href="images/CV_Ramiro_De_Rogatis.pdf" download data-i18n="hero.cv">Descargar CV</a>
         </div>
+
+        <ul class="ul-icons">
+          <li><a href="https://github.com/RamiroJavierDeRogatis090" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300"><i
+                class="bx bxl-github"></i></a></li>
+          <li><a href="https://www.instagram.com/ramiroderogatis/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400"><i
+                class="bx bxl-instagram"></i></a></li>
+          <li><a href="https://walink.co/9wcy4d" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"
+              data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500"><i class="bx bxl-whatsapp"></i></a>
+          </li>
+          <li><a href="https://www.linkedin.com/in/ramiro-javier-de-rogatis-09b119342/" target="_blank"
+              rel="noopener noreferrer" aria-label="LinkedIn" data-aos="fade-up" data-aos-duration="1000"
+              data-aos-delay="1600"><i class="bx bxl-linkedin"></i></a></li>
+        </ul>
       </div>
 
       <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
-        <img src="images/man1.png" alt="person-img">
+        <img src="images/man1.png" alt="Retrato de Ramiro Javier De Rogatis">
       </div>
     </div>
   </section>
 
-
-  <section class="tech-stack" id="habilidades">
-    <h2 data-aos="fade-up" data-aos-duration="1000">Tech Stack</h2>
-    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+  <section class="tech-stack snap-screen" id="habilidades">
+    <h2 data-aos="fade-up" data-aos-duration="1000" data-i18n="stack.title">Tech Stack</h2>
+    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-i18n="stack.subtitle">
       Lo que uso para construir proyectos digitales
     </p>
 
     <div class="stack-container">
-      <!-- Core Tech -->
       <div class="stack-group" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
-        <h3>Core Tech</h3>
+        <h3 data-i18n="stack.core">Core Tech</h3>
         <ul>
-          <li><i class='bx bxl-c-plus-plus'></i> C</li>
-          <li><i class='bx bxl-python'></i> Python</li>
-          <li><i class='bx bxl-html5'></i> HTML / CSS</li>
-          <li><i class='bx bxl-javascript'></i> JavaScript</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="400"><i class="bx bx-code"></i> C</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="500"><i class="bx bxl-python"></i> Python</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="600"><i class="bx bx-code-curly"></i> Kotlin</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="700"><i class="bx bxl-html5"></i> HTML / CSS</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="800"><i class="bx bxl-javascript"></i> JavaScript</li>
         </ul>
       </div>
 
-      <!-- Databases -->
       <div class="stack-group" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
-        <h3>Databases</h3>
+        <h3 data-i18n="stack.db">Bases de datos</h3>
         <ul>
-          <li><i class='bx bxs-data'></i> SQL</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="600"><i class="bx bxl-postgresql"></i> PostgreSQL</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="700"><i class="bx bxl-mongodb"></i> MongoDB</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="800"><i class="bx bxs-data"></i> Microsoft SQL Server</li>
         </ul>
       </div>
 
-      <!-- Tools & Workflow -->
       <div class="stack-group" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="700">
-        <h3>Tools & Workflow</h3>
+        <h3 data-i18n="stack.tools">Herramientas</h3>
         <ul>
-          <li><i class='bx bxl-visual-studio'></i> Visual Studio Code</li>
-          <li><i class='bx bxl-github'></i> GitHub</li>
-          <li><i class='bx bxs-file-doc'></i> Paquete Office</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="800"><i class="bx bxl-visual-studio"></i> Visual Studio Code</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="900"><i class="bx bxl-github"></i> GitHub</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="1000"><i class="bx bxl-nodejs"></i> n8n</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="1100"><i class="bx bxs-terminal"></i> Linux</li>
+          <li data-aos="fade-right" data-aos-duration="600" data-aos-delay="1200"><i class="bx bxs-file-doc"></i> Paquete Office</li>
         </ul>
       </div>
     </div>
   </section>
-  <!--Seccion -->
-  <section class="form" id="form">
-    <h2 class="form_title" data-aos="fade-up" data-aos-duration="1000">Contacto</h2>
+
+  <section class="projects snap-screen" id="proyectos">
+    <h2 data-aos="fade-up" data-aos-duration="1000" data-i18n="projects.title">Proyectos</h2>
+    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-i18n="projects.subtitle">
+      Trabajos reales publicados en GitHub
+    </p>
+
+    <div class="projects-grid">
+
+      <article class="project-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+        <a class="project-card__preview" href="https://github.com/RamiroJavierDeRogatis090/DailyDex" target="_blank"
+          rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <img src="https://raw.githubusercontent.com/RamiroJavierDeRogatis090/DailyDex/main/screenshots/home.jpeg"
+            alt="Captura de la app DailyDex" loading="lazy">
+        </a>
+        <div class="project-card__body">
+          <h3>DailyDex</h3>
+          <p data-i18n="p.dailydex">App de tareas multiplataforma (Android e iOS) con una sola base de código en Kotlin
+            Multiplatform + Compose, backend en Supabase y Material 3.</p>
+          <ul class="project-card__tags">
+            <li>Kotlin</li>
+            <li>Compose</li>
+            <li>Supabase</li>
+          </ul>
+          <div class="project-card__links">
+            <a href="https://github.com/RamiroJavierDeRogatis090/DailyDex" target="_blank" rel="noopener noreferrer"
+              aria-label="Ver DailyDex en GitHub"><i class="bx bxl-github"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="350">
+        <a class="project-card__preview" href="https://ramirojavierderogatis090.github.io/Tabladegoleadores.github.io/"
+          target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <img src="https://raw.githubusercontent.com/RamiroJavierDeRogatis090/Tabladegoleadores.github.io/main/capturas/paginaChimuelos.png"
+            alt="Captura de la página Tabla de Goleadores - Chimuelos FC" loading="lazy">
+        </a>
+        <div class="project-card__body">
+          <h3>Tabla de Goleadores — Chimuelos FC</h3>
+          <p data-i18n="p.goleadores">Página interactiva con la tabla de goleadores del equipo: ordenamiento por
+            columnas, buscador en vivo, Puskás de la fecha con video y modo claro/oscuro. Los datos se cargan desde un
+            Excel.</p>
+          <ul class="project-card__tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>SheetJS</li>
+          </ul>
+          <div class="project-card__links">
+            <a href="https://github.com/RamiroJavierDeRogatis090/Tabladegoleadores.github.io" target="_blank"
+              rel="noopener noreferrer" aria-label="Ver código de Tabla de Goleadores"><i
+                class="bx bxl-github"></i></a>
+            <a href="https://ramirojavierderogatis090.github.io/Tabladegoleadores.github.io/" target="_blank"
+              rel="noopener noreferrer" aria-label="Ver demo de Tabla de Goleadores"><i class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card" data-aos="fade-up" data-aos-duration="900" data-aos-delay="500">
+        <a class="project-card__preview" href="https://ramirojavierderogatis090.github.io/SistemaDeEstrellasAmistad.github.io/"
+          target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <img src="https://raw.githubusercontent.com/RamiroJavierDeRogatis090/SistemaDeEstrellasAmistad.github.io/main/home.png"
+            alt="Captura del Sistema de Estrellas - Club La Amistad" loading="lazy">
+        </a>
+        <div class="project-card__body">
+          <h3>Sistema de Estrellas — La Amistad</h3>
+          <p data-i18n="p.estrellas">Ranking de estrellas del club cargado desde Excel, con búsqueda en tiempo real,
+            ordenamiento, Botín de Oro destacado, música de fondo y tema oscuro con acentos dorados.</p>
+          <ul class="project-card__tags">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>SheetJS</li>
+          </ul>
+          <div class="project-card__links">
+            <a href="https://github.com/RamiroJavierDeRogatis090/SistemaDeEstrellasAmistad.github.io" target="_blank"
+              rel="noopener noreferrer" aria-label="Ver código del Sistema de Estrellas"><i
+                class="bx bxl-github"></i></a>
+            <a href="https://ramirojavierderogatis090.github.io/SistemaDeEstrellasAmistad.github.io/" target="_blank"
+              rel="noopener noreferrer" aria-label="Ver demo del Sistema de Estrellas"><i
+                class="bx bx-link-external"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <a class="project-card project-card--more" href="https://github.com/RamiroJavierDeRogatis090?tab=repositories"
+        target="_blank" rel="noopener noreferrer" data-aos="fade-up" data-aos-duration="900" data-aos-delay="650">
+        <div class="project-card__body project-card__body--more">
+          <i class="bx bxl-github project-card__more-icon"></i>
+          <h3 data-i18n="projects.moreTitle">Conoceme más</h3>
+          <p data-i18n="projects.moreText">Mirá todos mis repositorios, contribuciones y lo que estoy construyendo
+            ahora mismo en GitHub.</p>
+          <span class="project-card__more-cta"><span data-i18n="projects.moreCta">Ver perfil completo</span>
+            <i class="bx bx-right-arrow-alt"></i></span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="form snap-screen" id="form">
+    <h2 class="form__title" data-aos="fade-up" data-aos-duration="1000" data-i18n="contact.title">Contacto</h2>
 
     <form action="https://formspree.io/f/mwvjlpwl" method="POST" class="form__form" data-aos="zoom-in"
       data-aos-duration="1000" data-aos-delay="200">
       <div class="form__row">
         <div class="form__input" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
-          <label>Nombre
-            <input type="text" name="nombre" placeholder="John" required>
+          <label for="nombre" data-i18n="contact.name">Nombre
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" data-i18n-placeholder="contact.namePh"
+              required>
           </label>
         </div>
         <div class="form__input" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
-          <label>Apellido
-            <input type="text" name="apellido" placeholder="Doe" required>
+          <label for="apellido" data-i18n="contact.lastname">Apellido
+            <input type="text" id="apellido" name="apellido" placeholder="Tu apellido"
+              data-i18n-placeholder="contact.lastnamePh" required>
           </label>
         </div>
       </div>
 
       <div class="form__input">
-        <label>E-mail
-          <input type="email" name="email" placeholder="mail@example.com" required>
+        <label for="email">E-mail
+          <input type="email" id="email" name="email" placeholder="mail@example.com" required>
         </label>
       </div>
       <div class="form__input">
-        <label>Mensaje
-          <textarea name="mensaje" placeholder="your message" required></textarea>
+        <label for="mensaje" data-i18n="contact.message">Mensaje
+          <textarea id="mensaje" name="mensaje" placeholder="Escribí tu mensaje..."
+            data-i18n-placeholder="contact.messagePh" required></textarea>
         </label>
       </div>
 
       <div class="form__input">
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar" data-i18n-value="contact.submit">
       </div>
     </form>
   </section>
 
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="codigo.js"></script>
 
 </body>
